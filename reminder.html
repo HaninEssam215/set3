@@ -17,21 +17,109 @@
             margin: 0;
             font-size: 10.67575455px;        
         }
-        b{
-            font-weight: 800;
-        }
-        .Header{
-            font-weight: 300 !important;
-        }
         .container{
-            /* padding-right: 50px;
-            padding-left: 50px; */
             width: 8.5in;
             margin: auto;
             position: relative;
             white-space: nowrap;
         }
+        b{
+            font-weight: 800;
+        }
+        .orange{
+            color: #ff5e04;
+        }
+        .logo{
+            font-size: 26.68238258px;
+        }
+        .company_name{
+            font-size: 32.02686691px;
+        }
+        .company_address{
+            font-size: 16.01343346px;
+        }
+        .company_info{
+            padding-left: 137px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+        .reminder{
+            display: flex;
+            align-items: start;
+            margin-top: 35px;
+            border-bottom: 1px solid #d9d9d9;
+            padding-bottom: 40px;
+        }
+        .reminder .title{
+            margin-bottom: 30px;
+        }
+        .page_name{
+            font-size: 29.35462379px;
+            margin-right: 60px
+        }
+        .billed_to{
+            margin-right: 80px;
+        }
+        .name{
+            margin-bottom: 20px;
+        }
+        .ocr{
+            margin-top: 20px;
+        }
 
+        .reminder_table{
+            margin-top: 15px;
+            padding-bottom: 15px;
+            position: relative;
+            border-bottom: 1px solid #d9d9d9;
+        }
+        .reminder_table_title{
+            margin-bottom: 30px;
+            font-size: 16.01343346px;
+        }
+        .reminder_table .value{
+            position: absolute;
+            right: 0;
+        }
+        .table_rows{
+            margin-bottom: 5px;
+        }
+
+        .total{
+            text-align: end;
+            font-size: 16.01343346px;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .reminder_text{
+            margin-top: 50px;
+            white-space: normal;
+        }
+        .reminder_text_title{
+            font-size: 18.67566681px;
+        }
+        .reminder_text .upper_text{
+            margin-bottom: 20px;
+        }
+
+        .payment{
+            margin-top: 40px;
+            position: relative;
+        }
+        .payment_title{
+            font-size: 18.67566681px;
+            margin-bottom: 35px;
+        }
+        .payment .second-column{
+            padding-left: 60px;
+            position: absolute;
+            top: 80px;
+        }
+        .iban, .payment_method{
+            margin-bottom: 24px;
+        }
         .footer{
             color: #5b4f47;
             margin-top: 275px;
@@ -41,7 +129,7 @@
         .footer i{
             margin-right: 15px;
             font-size: 22px;
-            color: #fbd4d4 !important;
+            color: #121212 !important;
         }
         .footer .mail{
             margin-left: 100px;
@@ -71,7 +159,7 @@
             <div class="logo inline_block">LOGO</div>
             <div class="company_info inline_block">
                 <div class="company_name sansation orange">COMPANY INC,</div>
-                <div>123 Anywhere St., Any City, ST 12345</div>
+                <div class="company_address">123 Anywhere St., Any City, ST 12345</div>
             </div>
         </div>
 
@@ -109,7 +197,7 @@
 
          <!--------------------REMINDER TABLE-------------->
          <div class="reminder_table table">
-            <div class="table_rows inline-block reminder_table_title">
+            <div class="inline-block reminder_table_title">
                 <div><b>Reminder refers to</b></div>
             </div>
             <div class="table_rows">
@@ -139,7 +227,7 @@
 
         <!------------------REMINDER TEXT--------------->
         <div class="reminder_text">
-            <div class="reminder_text_title sansation"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
+            <div class="reminder_text_title sansation orange"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
             <div class="upper_text">
                 Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
                 påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
