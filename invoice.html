@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>invoice</title>
+    <style>
+        @font-face {
+            font-family: 'sansation';
+            src: url("fonts/Sansation_Bold.ttf") format('truetype');
+        }
+        body{
+            color:  #121212 !important;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            font-size: 10.67575455px;     
+            letter-spacing: 2px;
+            font-weight: lighter;   
+        }
+        .container{
+            width: 8.5in;
+            margin: auto;
+            position: relative;
+            white-space: nowrap;
+        }
+        b{
+            font-weight: 800;
+        }
+        .sansation{
+            font-family: 'sansation', sans-serif;
+        }
+        .orange{
+            color: #ff5e04;
+        }
+        .header{
+            border-bottom: 1px solid #d9d9d9;
+            padding-bottom: 10px;
+        }
+        .logo{
+            font-size: 26.68238258px;
+            font-weight: 700;
+            margin-top: 47px;
+        }
+        .company_name{
+            font-size: 32.02686691px;
+        }
+        .company_address{
+            font-size: 16.01343346px;
+        }
+        .company_info{
+            padding-left: 137px;
+            padding-bottom: 50px;
+            margin-top: 47px;
+        }
+        .invoice{
+            margin-top: 32.5px;
+        }
+        .page_name{
+            font-size: 29.35462379px;
+            margin-bottom: 20px;
+        }
+        .ocr{
+            margin-top: 20px;
+        }
+        .billed_to{
+            padding-left: 110px;
+            position: absolute;
+            width: 180px;
+            white-space: normal;
+        }
+        .billed_to .title{
+            font-size: 16.01343346px;
+        }
+        .invoice_info{
+            width: 345px;
+            white-space: normal;
+            /* position: relative;
+            top: 45px; */
+        }
+        .ref{
+            margin-bottom: 40px;
+        }
+
+        .table{
+            margin-top: 20px;
+            padding-left: 12.5px
+        }
+        .bullet{
+            display: list-item;
+            padding-bottom: 1px !important;
+            margin-left: 18px;
+        }
+        .table .titles{
+            margin-bottom: 15px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #d9d9d9;
+            font-weight: 800;
+        }
+        .no div, .price div, .discount div,.qty div, .vat div, .total div{
+            padding-bottom: 50px;
+        }
+        .item div{
+            padding-bottom: 30px;
+        }
+        .no{
+            width: 32.13px;
+        }
+        .item{
+            padding-left: 57.5px;
+            width: 185.5px;
+        
+        }
+        .price{
+            width: 38px;
+            padding-left: 23px;
+        }
+        .qty{
+            width: 56.35px;
+            padding-left: 30px;
+        }
+        .discount{
+            width: 67px;
+            padding-left: 30px;
+        }
+        .vat{
+            white-space: normal;
+            width: 25px;
+            padding-left: 32.5px;
+        }
+        .total{
+            padding-left: 170px;
+        }
+        .payment{
+            margin-top: 40px;
+            position: relative;
+        }
+        .payment_title{
+            font-size: 18.67566681px;
+            margin-bottom: 35px;
+        }
+        .payment .second-column{
+            padding-left: 60px;
+            position: absolute;
+            top: 80px;
+        }
+        .iban, .payment_method{
+            margin-bottom: 24px;
+        }
+        .iban, .bank_transfer{
+            font-size: 13.34469414px;
+        }
+        .var{
+            padding-left: 95px;
+        }
+
+        .TOTAL{
+            text-align: end;
+            /* margin-top: 42.5px; */
+            padding-bottom: 15px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .total_val{
+            text-align: end;
+            margin-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #d9d9d9;
+        }
+        .footer{
+            color: #5b4f47;
+            margin-top: 40px;
+            letter-spacing: 0 !important;
+            /* font-size: 15px; */
+        }
+        .footer i{
+            margin-right: 15px;
+            /* font-size: 22px; */
+            color: #121212 !important;
+        }
+        .footer .contacts{
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .footer .mail{
+            margin-left: 100px;
+        }
+        .footer .location{
+            margin-left: 100px;
+        }
+        .footer_key{
+            margin-top: 10px;
+            padding-left: 145px;
+            color: #1c2120;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline_block{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-----------------------HEADER------------------>
+        <div class="header">
+            <div class="logo inline_block">LOGO</div>
+            <div class="company_info inline_block">
+                <div class="company_name sansation orange">COMPANY INC,</div>
+                <div class="company_address">123 Anywhere St., Any City, ST 12345</div>
+            </div>
+            <div class="variables">
+                <div class="inline_block">&#60;company_name></div>
+                <div class="inline_block var">&#60;organisation_number></div>
+                <div class="inline_block var">&#60;vat_number></div>
+                <div class="inline_block var">Godkänd för F-skatt</div>
+            </div>
+        </div>
+
+
+        <!-----------------------INVOICE----------------->
+        <div class="invoice">
+            <div class="page_name sansation orange">INVOICE</div>
+            <div>
+                <div class="inline_block invoice_info">
+                    <div class="ref">
+                        <div><b>Our reference:</b> QIXRXA 20LRJ9 BLG6IZ 1FBUCU OAQR4R HUEP1S 1AIQFZ
+                            7FO5M3 AQZC6D QV1QSC</div>
+                        <div><b>Your reference:</b>  IBT0YV V07UD5 4WHHIT LR9NCC B1Q1XR 9HWEUR
+                            EXW28E W37S24 YT648F FGOXFM</div>
+                        <div><b>Order number:</b> 8648393</div>
+                        <div><b>Reference 1:</b> 939475749</div>
+                        <div><b>Reference 2:</b> 20935759</div>
+                    </div>
+                    <div class="extra_field">
+                        <div><b>&#60;extra_field_key1>:</b> IBT0YV V07UD5 4WHHIT LR9NCC B1Q1XR 9HWEUR
+                            EXW28E W37S24 YT648F FGOXFM</div>
+                        <div><b>&#60;extra_field_key1>:</b> IBT0YV V07UD5 4WHHIT LR9NCC B1Q1XR 9HWEUR
+                            EXW28E W37S24 YT648F FGOXFM</div>
+                        <div><b>&#60;extra_field_key1>:</b> IBT0YV V07UD5 4WHHIT LR9NCC B1Q1XR 9HWEUR
+                            EXW28E W37S24 YT648F FGOXFM</div>
+                    </div>
+                </div>
+                <div class="inline_block billed_to">
+                    <div class="title"><b>BILLED TO</b></div>
+                    <div class="name"><b>Samira Hadid</b></div>
+                    <div class="info">
+                        <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
+                        <div>Date : 21/05/2022</div>
+                        <div>Number: +123-456-7890</div>
+                        <div>&#60;receiver_extra_field1>: &#60;value1></div>
+                        <div>&#60;receiver_extra_field2>: &#60;value2></div>
+                    </div>
+                    <div class="ocr">
+                        <div>OCR No: 12345</div>
+                        <div>Reminder number: 2857193521I</div>
+                        <div>Date: 23/06/2023</div>
+                        <div>Due date: 30/06/2023</div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+        <!-----------------------TABLE------------------->
+        <div class="table">
+            <div class="titles">
+                <div class="inline_block no">NO.</div>
+                <div class="inline_block item">ITEM</div>
+                <div class="inline_block price">PRICE</div>
+                <div class="inline_block qty">QTY</div>
+                <div class="inline_block discount">DISCOUNT</div>
+                <div class="inline_block vat">VAT-RATE</div>
+                <div class="inline_block total">TOTAL</div>
+            </div>
+            <div class="inline_block no">
+                <div>0000</div>
+                <div>0000</div>
+                <div>0000</div>
+            </div>
+            <div class="inline_block item">
+                <div><b>30-Day Abs Bootcamp</b></br>
+                    <div class="bullet">
+                        daily workout videos</div>
+                    <div class="bullet">
+                        weekly coaching sessions
+                    </div>
+                </div>
+                <div><b>DKY Urban Club Kettlebell</b></br>
+                    <div class="bullet">
+                        Weighing 20 lb
+                    </div>
+                </div>
+                <div><b>DKY Urban Club Kettlebell</b></br>
+                    <div class="bullet">
+                        Weighing 10 lb
+                    </div>
+                </div>
+            </div>
+            <div class="inline_block price">
+                <div>$123</div>
+                <div>$127</div>
+                <div>$123</div>
+            </div>
+            <div class="inline_block qty">
+                <div>1</div>
+                <div>2</div>
+                <div>1</div>
+            </div>
+            <div class="inline_block discount">
+                <div>10%</div>
+                <div>10%</div>
+                <div>10%</div>
+            </div>
+            <div class="inline_block vat">
+                <div>10%</div>
+                <div>10%</div>
+                <div>10%</div>
+            </div>
+            <div class="inline_block total">
+                <div>$123</div>
+                <div>$254</div>
+                <div>$123</div>
+            </div>
+        </div>
+        <div class="TOTAL">
+            <div>
+                Total excl. VAT : <b>$450</b>
+            </div>
+            <div>
+                Invoice discount : <b>20%</b>
+            </div>
+            <div>
+                Total VAT : <b>$50</b>
+            </div>
+        </div>
+        <div class="total_val orange">
+            <b>TOTAL: $500</b>
+        </div>
+
+        <!-----------------------PAYMENT----------------->
+        <div class="payment">
+            <div class="payment_title">
+                <div><b>Payment Method</b></div>
+            </div>
+            <div class="inline_block">
+                <div class="inline_block first-column">
+                    <div class="iban">
+                        <div><b>IBAN</b></div>
+                        <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                        <div>Swift-number: BNOR PH MMXXX</div>
+                        <div>Bank: SEB</div>
+                    </div>
+                    <div class="bank_transfer">
+                        <div><b>BANK TRANSFER</b></div>
+                        <div>Account number: DE89370400440532013000</div>
+                        <div>Clearing number: DEBLZ12345678</div>
+                        <div>Bank: SEB</div>
+                    </div>
+                </div>
+                <div class="inline_block second-column">
+                    <div class="payment_method">
+                        <div>Bankgiro-number: 12345678</div>
+                        <div>Plusgiro-number: 845747383</div>
+                        <div>Swish-number: 1234562355</div>
+                    </div>
+                    <div class="terms">
+                        <div>
+                            Terms of payment: 6
+                        </div>
+                        <div>Late interest rate: 10.50% per annum</div>
+                        <div>Invoice period: &#60;invoice_period></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-----------------------FOOTER------------------>
+        <div class="col footer">
+            <div class="contacts poppins">
+                <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
+                <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
+                <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
+            
+            </div>
+            <div class="footer_key" style="position: relative;">
+                <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
+                <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+                <div class="page_no inline" style="position: absolute; right: -70px;">PAGE 1/1</div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+</body>
+</html>
