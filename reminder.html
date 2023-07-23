@@ -3,12 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <title>reminder</title>
     <style>
+        @font-face {
+            font-family: 'sansation';
+            src: url("fonts/Sansation_Bold.ttf") format('truetype');
+        }
         body{
             color:  #121212 !important;
             font-family: 'Ubuntu', sans-serif;
@@ -26,11 +31,19 @@
         b{
             font-weight: 800;
         }
+        .sansation{
+            font-family: 'sansation', sans-serif;
+        }
         .orange{
             color: #ff5e04;
         }
+        .header{
+            margin-top: 47px;
+            border-bottom: 1px solid #d9d9d9;
+        }
         .logo{
             font-size: 26.68238258px;
+            font-weight: 700;
         }
         .company_name{
             font-size: 32.02686691px;
@@ -41,7 +54,6 @@
         .company_info{
             padding-left: 137px;
             padding-bottom: 50px;
-            border-bottom: 1px solid #d9d9d9;
         }
         .reminder{
             display: flex;
@@ -124,11 +136,11 @@
             color: #5b4f47;
             margin-top: 275px;
             letter-spacing: 0 !important;
-            font-size: 15px;
+            /* font-size: 15px; */
         }
         .footer i{
             margin-right: 15px;
-            font-size: 22px;
+            /* font-size: 22px; */
             color: #121212 !important;
         }
         .footer .mail{
