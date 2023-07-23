@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <title>reminder</title>
+    <style>
+        body{
+            color:  #121212 !important;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            font-size: 10.67575455px;        
+        }
+        b{
+            font-weight: 800;
+        }
+        .Header{
+            font-weight: 300 !important;
+        }
+        .container{
+            /* padding-right: 50px;
+            padding-left: 50px; */
+            width: 8.5in;
+            margin: auto;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .footer{
+            color: #5b4f47;
+            margin-top: 275px;
+            letter-spacing: 0 !important;
+            font-size: 15px;
+        }
+        .footer i{
+            margin-right: 15px;
+            font-size: 22px;
+            color: #fbd4d4 !important;
+        }
+        .footer .mail{
+            margin-left: 100px;
+        }
+        .footer .location{
+            margin-left: 40px;
+        }
+        .footer_key{
+            margin-top: 10px;
+            padding-left: 145px;
+            color: #1c2120;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline_block{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-----------------------HEADER------------------>
+        <div class="header">
+            <div class="logo inline_block">LOGO</div>
+            <div class="company_info inline_block">
+                <div class="company_name sansation orange">COMPANY INC,</div>
+                <div>123 Anywhere St., Any City, ST 12345</div>
+            </div>
+        </div>
+
+        <!---------------------REMINDER------------------>
+        <div class="reminder">
+            <div class="inline_block page_name sansation orange">REMINDER</div>
+            <div class="inline_block billed_to">
+                <div class="title"><b>BILLED TO</b></div>
+                <div class="name"><b>Samira Hadid</b></div>
+                <div class="info">
+                    <div>Address: 123 Anywhere St.,Any City, ST 12345</div>
+                    <div>Date : 21/05/2022</div>
+                    <div>Number: +123-456-7890</div>
+                    <div>&#60;receiver_extra_field1>: &#60;value1></div>
+                    <div>&#60;receiver_extra_field2>: &#60;value2></div>
+                </div>
+                <div class="ocr">
+                    <div>OCR No: 12345</div>
+                    <div>Reminder number: 2857193521I</div>
+                    <div>Date: 23/06/2023</div>
+                    <div>Due date: 30/06/2023</div>
+                </div>
+            </div>
+            <div class="inline_block payable_to">
+                <div class="title"><b>PAYABLE TO</b></div>
+                <div class="info">
+                    <div>&#60;company_name></div>
+                    <div>&#60;organisation_number></div>
+                    <div>&#60;vat_number></div>
+                    <div>Godkänd för F-skatt</div>
+                </div>
+            </div>
+        </div>
+
+
+         <!--------------------REMINDER TABLE-------------->
+         <div class="reminder_table table">
+            <div class="table_rows inline-block reminder_table_title">
+                <div><b>Reminder refers to</b></div>
+            </div>
+            <div class="table_rows">
+                <div class="inline_block"><b>Invoice:</b></div>
+                <div class="value inline_block">&#60;invoice_number></div>
+            </div>
+            <div class="table_rows ">
+                <div class="inline_block"><b>Invoice amount:</b></div>
+                <div class="value inline_block">&#60;invoice_amount></div>
+            </div>
+            <div class="table_rows">
+                <div class="inline_block"><b>Due date:</b></div>
+                <div class="value inline_block">&#60;due_date></div>
+            </div>
+            <div class="table_rows">
+                <div class="inline_block"><b>Reminder fee:</b></div>
+                <div class="value inline_block">&#60;reminder_fee></div>
+            </div>
+            <div class="table_rows">
+                <div class="inline_block"><b>Interest fee:</b></div>
+                <div class="value inline_block">&#60;interest_fee></div>
+            </div>
+        </div>
+
+        <div class="total orange"><b>Total:$500</b></div>
+
+
+        <!------------------REMINDER TEXT--------------->
+        <div class="reminder_text">
+            <div class="reminder_text_title sansation"><b>PÅMINNELSE OBETALD FAKTURA NR 5682 FRÅN COMP: INC</b></div>
+            <div class="upper_text">
+                Vi kan inte se att det inkommit någon betalning för rubricerad faktura. Därför ska istället denna
+                påminnelsefaktura betalas. Betalningen ska vara oss tillhanda senast 2021-10-04. Därefter kan fakturan komma att
+                överlämnas till inkasso vilket medför ytterligare kostnader.
+            </div>
+            <div>
+                Ār fakturan redan betald?</br>
+                Om du har betalat rekommenderar vi dig att kontrollera att du har betalat till rätt bankgiro och med rätt referens.
+            </div>
+        </div>
+
+
+        
+        <!-------------------PAYMENT------------------->
+        <div class="payment">
+            <div class="payment_title">
+                <div><b>Payment Info</b></div>
+            </div>
+            <div class="inline_block">
+                <div class="inline_block first-column">
+                    <div class="iban">
+                        <div><b>IBAN</b></div>
+                        <div>IBAN-number: JO71CB JO0000 000000 001234 567890</div>
+                        <div>Swift-number: BNOR PH MMXXX</div>
+                        <div>Bank: SEB</div>
+                    </div>
+                    <div class="bank_transfer">
+                        <div><b>BANK TRANSFER</b></div>
+                        <div>Account number: DE89370400440532013000</div>
+                        <div>Clearing number: DEBLZ12345678</div>
+                        <div>Bank: SEB</div>
+                    </div>
+                </div>
+                <div class="inline_block second-column">
+                    <div class="payment_method">
+                        <div>Bankgiro-number: 12345678</div>
+                        <div>Plusgiro-number: 845747383</div>
+                        <div>Swish-number: 1234562355</div>
+                    </div>
+                    <div class="terms">
+                        <div>
+                            Terms of payment: 6
+                        </div>
+                        <div>Late interest rate: 10.50% per annum</div>
+                        <div>Invoice period: &#60;invoice_period></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------FOOTER------------------>
+        <div class="col footer">
+            <div class="contacts poppins">
+                <div class="row phone inline"><i class="fa-solid fa-phone"></i>+123-456-7890</div>
+                <div class="row mail inline"><i class="fa-solid fa-envelope"></i>hello@reallygreatsite.com</div>
+                <div class="row location inline"><i class="fa-solid fa-location-dot"></i>123 Anywhere St., Any City, ST 12345</div>
+            
+            </div>
+            <div class="footer_key">
+                <div class="inline">&#60;footer_key_1> &#60;footer_key_1> </div>
+                <div class="inline"style="padding-left: 87.5px;">&#60;footer_key_2> &#60;footer_key_2></div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
